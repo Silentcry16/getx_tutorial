@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:getx_tutorial/controller/product_controller.dart';
 import 'package:getx_tutorial/controller/product_getbuilder_controller.dart';
 import 'package:getx_tutorial/model/product_model.dart';
+import 'package:getx_tutorial/view/getbuild_uniq_id_screen.dart';
 
 class GetbuildScreen extends StatelessWidget {
   GetbuildScreen({super.key});
@@ -42,7 +43,7 @@ class GetbuildScreen extends StatelessWidget {
               children: [
                 ElevatedButton(
                   onPressed: () {
-                    Get.back();
+                    Get.to(GetbuildUniqeIDScreen());
                   },
                   child: Text('Back'),
                 ),
