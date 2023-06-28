@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx_tutorial/controller/product_controller.dart';
 import 'package:getx_tutorial/controller/product_getbuilder_controller.dart';
 import 'package:getx_tutorial/model/product_model.dart';
 import 'package:getx_tutorial/view/getbuild_uniq_id_screen.dart';
 
 class GetbuildScreen extends StatelessWidget {
-  GetbuildScreen({super.key});
+  const GetbuildScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,15 +23,15 @@ class GetbuildScreen extends StatelessWidget {
                   children: [
                     Text(
                       'product name: ${productController.productModel.name}',
-                      style: TextStyle(fontSize: 20),
+                      style: const TextStyle(fontSize: 20),
                     ),
                     Text(
                       'product price: ${productController.productModel.price}',
-                      style: TextStyle(fontSize: 20),
+                      style: const TextStyle(fontSize: 20),
                     ),
                     Text(
                       'product off: ${productController.productModel.off}',
-                      style: TextStyle(fontSize: 20),
+                      style: const TextStyle(fontSize: 20),
                     ),
                   ],
                 );
@@ -43,15 +42,15 @@ class GetbuildScreen extends StatelessWidget {
               children: [
                 ElevatedButton(
                   onPressed: () {
-                    Get.to(GetbuildUniqeIDScreen());
+                    Get.to(const GetbuildUniqeIDScreen());
                   },
-                  child: Text('Back'),
+                  child: const Text('Back'),
                 ),
                 ElevatedButton(
                   onPressed: () {
                     Get.find<ProductGetBuilderController>().setValu();
                   },
-                  child: Text('Update'),
+                  child: const Text('Update'),
                 ),
               ],
             ),

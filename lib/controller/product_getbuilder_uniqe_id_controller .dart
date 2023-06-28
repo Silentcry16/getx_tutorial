@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+
 import 'package:getx_tutorial/model/product_model.dart';
 
 class ProductGetBuilderUniqeIdController extends GetxController {

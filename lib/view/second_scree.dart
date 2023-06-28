@@ -43,7 +43,7 @@ class SecondScreen extends StatelessWidget {
               children: [
                 ElevatedButton(
                   onPressed: () {
-                    Get.to(GetbuildScreen());
+                    Get.to(const GetbuildScreen());
                   },
                   child: const Text('Next'),
                 ),
@@ -51,8 +51,8 @@ class SecondScreen extends StatelessWidget {
                   onPressed: () {
                     Get.find<ProductController>().productModel.update((val) {
                       val!.name = 'cola';
-                      val!.price = '800';
-                      val!.off = '25%';
+                      val.price = '800';
+                      val.off = '25%';
                     });
                   },
                   child: const Text('Update'),

@@ -4,6 +4,7 @@ import 'package:getx_tutorial/controller/product_controller.dart';
 import 'package:getx_tutorial/model/product_model.dart';
 import 'package:getx_tutorial/view/second_scree.dart';
 
+// ignore: must_be_immutable
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
 
@@ -25,15 +26,15 @@ class HomeScreen extends StatelessWidget {
                 children: [
                   Text(
                     'product name: ${productController.productModel.value.name}',
-                    style: TextStyle(fontSize: 20),
+                    style: const TextStyle(fontSize: 20),
                   ),
                   Text(
                     'product price: ${productController.productModel.value.price}',
-                    style: TextStyle(fontSize: 20),
+                    style: const TextStyle(fontSize: 20),
                   ),
                   Text(
                     'product off: ${productController.productModel.value.off}',
-                    style: TextStyle(fontSize: 20),
+                    style: const TextStyle(fontSize: 20),
                   ),
                 ],
               );
@@ -45,15 +46,15 @@ class HomeScreen extends StatelessWidget {
                   onPressed: () {
                     productController.productModel.update((val) {
                       val!.name = 'spageti';
-                      val!.price = '65800';
-                      val!.off = '20%';
+                      val.price = '65800';
+                      val.off = '20%';
                     });
                   },
-                  child: Text('update'),
+                  child: const Text('update'),
                 ),
                 ElevatedButton(
-                  onPressed: () => Get.to(SecondScreen()),
-                  child: Text('scond screen'),
+                  onPressed: () => Get.to(const SecondScreen()),
+                  child: const Text('scond screen'),
                 ),
               ],
             ),

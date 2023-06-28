@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:getx_tutorial/utils/translation.dart';
 
@@ -25,22 +24,22 @@ class TwoLangScreen extends StatelessWidget {
                               children: [
                                 TextButton(
                                     onPressed: () {
-                                      Get.updateLocale(Locale('fa', 'IR'));
+                                      Get.updateLocale(const Locale('fa', 'IR'));
                                       Get.back();
                                     },
-                                    child: Text('Farsi')),
+                                    child: const Text('Farsi')),
                                 TextButton(
                                     onPressed: () {
-                                      Get.updateLocale(Locale('en', 'US'));
+                                      Get.updateLocale(const Locale('en', 'US'));
                                       Get.back();
                                     },
-                                    child: Text('English')),
+                                    child: const Text('English')),
                               ],
                             )
                           ],
                         ));
               },
-              icon: Icon(Icons.translate))
+              icon: const Icon(Icons.translate))
         ],
       ),
       body: Center(
@@ -48,7 +47,7 @@ class TwoLangScreen extends StatelessWidget {
           padding: const EdgeInsets.all(8.0),
           child: Text(
             MyTranslation.message.tr,
-            style: TextStyle(fontSize: 22),
+            style: const TextStyle(fontSize: 22),
           ),
         ),
       ),
